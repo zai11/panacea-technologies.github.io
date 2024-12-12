@@ -39,7 +39,8 @@ header {
     width: 50%;
 }
 
-#menu a {
+#menu a, 
+#hamburger-menu a {
     text-decoration: none;
     padding-bottom:20px;
     font-weight: 400;
@@ -48,8 +49,36 @@ header {
     text-decoration: none;
 }
 
-#menu a:hover {
+#menu a:hover,
+#hamburger-menu a:hover {
     text-decoration: underline;
+}
+
+#menu-mobile {
+    display: none;
+    margin-right: 20px;
+    align-items: center;
+    height: 120px;
+}
+
+#hamburger {
+    width: 50px;
+}
+
+#hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    background-color: #CCC;
+}
+
+#hamburger-menu a {
+    color:#05121E;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
 }
 
 #display {
@@ -291,4 +320,125 @@ footer {
 
 footer p {
     margin: 0px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    #menu {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #menu {
+        width: 100%;
+    }
+
+    .portfolio-item {
+        width: 270px;
+        height:177px;
+    }
+
+    .portfolio-item p {
+        line-height: 177px;
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #menu-container {
+        display: none;
+    }
+
+    #menu-mobile {
+        display: flex;
+    }
+
+    #display-content h1 {
+        font-size: 18pt;
+    }
+
+    .service {
+        width: 30%;
+    }
+
+    footer p {
+        font-size: 8pt;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #display-content h1 {
+        font-size: 14pt;
+    }
+
+    #display-content .action-button {
+        margin-top: 10px;
+    }
+
+    .service {
+        width: 50%;
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #logo, #menu-mobile {
+        height: 80px;
+    }
+
+    #hamburger-menu {
+        top: 70px;
+    }
+
+    #display {
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    #display-content {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 6pt;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #display-content h1 {
+        font-size: 12pt;
+    }
+
+    #display-content .action-button {
+        margin: 0px;
+    }
+
+    .service {
+        width: 70%;
+    }
+
+    .portfolio-item {
+        width: 180px;
+        height: 118px;
+    }
+
+    .portfolio-item p {
+        line-height: 118px;
+        font-size: 8pt;
+    }
+
+    footer p {
+        font-size: 5pt;
+    }
 }
