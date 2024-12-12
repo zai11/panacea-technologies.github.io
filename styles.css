@@ -106,7 +106,7 @@ header {
 }
 
 #about>* {
-    width: 40%;
+    width: 50%;
 }
 
 #services {
@@ -208,7 +208,7 @@ header {
 }
 
 #contact > * {
-    width: 60%;
+    width: 50%;
 }
 
 .contact-intro > * + * {
