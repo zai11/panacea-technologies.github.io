@@ -9,7 +9,7 @@
         <link rel="icon" href="./res/icon.png" />
         <link rel="stylesheet" href="./styles.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
     </head>
     <body>
         <header>
@@ -88,7 +88,7 @@
                     </p>
                   </div>
                 
-                  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                  <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 
                     <input type="hidden" name="access_key" value="74fe0e30-4085-4c69-9052-da3e901bd87b" />
                     <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
@@ -97,22 +97,22 @@
                     <div class="form-group-container">
                       <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
                       </div>
                       <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
                       </div>
                       <div class="form-group">
                         <label for="phone" class="form-label">Phone</label>
-                        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+                        <input id="phone" name="phone" class="form-input" placeholder="(+61) 412 345 678" type="text" />
                       </div>
                       <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                        <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
                       </div>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LeI3ZkqAAAAALTvGXtn0YkZBCpX2rErTKEow0Sn"></div>
+                    <div class="h-captcha" data-captcha="true"></div>
                     <button class="form-submit" type="submit">Send Message</button>
                   </form>
             </div>
@@ -122,5 +122,20 @@
             <p>ABN: 86-768-265-615</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            const form = document.getElementById('contact-form');
+            console.log(form);
+            
+            form.addEventListener('submit', function(e) {
+            
+                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+            
+                if (!hCaptcha) {
+                    e.preventDefault();
+                    alert("Please fill out captcha field")
+                    return
+                }
+            });
+        </script>
     </body>
 </html>

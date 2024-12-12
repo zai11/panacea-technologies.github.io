@@ -277,6 +277,10 @@ header {
     border-radius: 0.375rem;
 }
 
+.h-captcha {
+    margin-top: 25px;
+}
+
 footer {
     background-color: #333;
     color: #FFF;
