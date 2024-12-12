@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Panacea Technologies</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <img id="logo" src="./res/logo_light.png">
+            </a>
+            <div id="menu-container">
+                <div id="menu">
+                    <a href="#about">ABOUT US</a>
+                    <a href="#services">SERVICES</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="display">
+                <img src="./res/display.png" alt="A display of connectnr.com on a mac, laptop, and smart phone." />
+                <div id="display-content">
+                    <h1>Transforming your vision into stunning, impactful digital experiences.</h1>
+                    <a class="action-button" href="#contact">Request A Quote</a>
+                </div>
+            </div>
+            <div id="about">
+                <h1>ABOUT US</h1>
+                <p>At Panacea Technologies, we believe every business deserves a digital presence that not only looks exceptional but also delivers real results. Locally founded in Brisbane with a passion for innovation and an eye for design, we specialize in crafting websites that are as functional as they are beautiful.</p>
+                <p>Our mission is to solve your digital challenges by combining cutting-edge technology with creative expertise. Whether you need a sleek portfolio, a robust e-commerce platform, or a fully customized solution, we tailor our services to meet your unique needs and goals.</p>
+                <p>We pride ourselves on delivering more than just websites — we create seamless online experiences that captivate audiences and drive growth. From strategy and design to development and launch, Panacea Technologies is your partner in navigating the digital landscape.</p>
+                <p>Let us help you transform your ideas into a digital reality that works for you.</p>
+            </div>
+            <div id="services">
+                <h1>SERVICES</h1>
+                <div id="service-grid">
+                    <div class="service" id="website-design">
+                        <img src="./res/icon_design.svg" alt="A paintbrush icon." />
+                        <h1>Web Design</h1>
+                    </div>
+                    <div class="service" id="website-development">
+                        <img src="./res/icon_dev.svg" alt="A html code icon." />
+                        <h1>Web Development</h1>
+                    </div>
+                    <div class="service" id="hosting">
+                        <img src="./res/icon_hosting.svg" alt="A server icon." />
+                        <h1>Web Hosting and Management</h1>
+                    </div>
+                    <div class="service" id="accessibility-analysis">
+                        <img src="./res/icon_accessibility.svg" alt="An accessibility icon." />
+                        <h1>Accessibility Analysis</h1>
+                    </div>
+                    <div class="service" id="seo">
+                        <img src="./res/icon_seo.svg" alt="A magnifying glass icon." />
+                        <h1>SEO Reporting</h1>
+                    </div>
+                    <div class="service" id="ads">
+                        <img src="./res/icon_ads.svg" alt="A speaker icon." />
+                        <h1>Advertising and Social Media Marketing</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio">
+                <h1>PORTFOLIO</h1>
+                <div class="portfolio-content">
+                    <div class="portfolio-item" id="connect-nr">
+                        <p>Connect Northern Rivers</p>
+                    </div>
+                    <div class="portfolio-item" id="choochoo-designs">
+                        <p>Choo-Choo Designs</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="contact-intro">
+                    <h2 class="contact-title">CONTACT US</h2>
+                    <p class="contact-description">
+                      Fill out the form below and we'll get back to you as soon as possible.
+                    </p>
+                  </div>
+                
+                  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                
+                    <input type="hidden" name="access_key" value="74fe0e30-4085-4c69-9052-da3e901bd87b" />
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+                    <input type="hidden" name="from_name" value="Panacea Technologies" />
+                
+                    <div class="form-group-container">
+                      <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                      </div>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    <button class="form-submit" type="submit">Send Message</button>
+                  </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Copyright 2024 Panacea Technologies. All rights reserved.</p>
+            <p>ABN: 86-768-265-615</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
