@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@keyframes service-hover {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes portfolio-hover-cover {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(0, 0, 0, 0.75); }
+}
+
+@keyframes portfolio-hover-text {
+    from { transform: translate(0px, 100px); }
+    to { transform: translate(0px, 0px); }
+}
+
 * {
     font-family: "Kanit", sans-serif;
     font-style: normal;
@@ -17,6 +34,7 @@ header {
     position: fixed;
     top:0;
     left:0;
+    z-index: 1;
 }
 
 #logo {
@@ -83,9 +101,16 @@ header {
 
 #display {
     margin-top: 120px;
-    background-color: #065F6B;
     display:flex;
     align-items: center;
+    --dot-bg: #065F6B;
+    --dot-color: white;
+    --dot-size: 1px;
+    --dot-space: 10px;
+	background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
 }
 
 #display img {
@@ -174,6 +199,11 @@ header {
     margin-bottom: 30px;
 }
 
+.service:hover img {
+    animation: service-hover;
+    animation-duration: 0.3s;
+}
+
 .service h1 {
     font-size: 20pt;
 }
@@ -212,10 +242,19 @@ header {
     background-repeat: no-repeat;
 }
 
-.portfolio-item>p {
+.portfolio-item-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-item-cover:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+.portfolio-item-cover>p {
+    width: 100%;
     color: #F3F3F3;
     line-height: 250px;
     font-size: 20pt;
@@ -223,8 +262,10 @@ header {
     display:none;
 }
 
-.portfolio-item:hover>p {
+.portfolio-item-cover:hover>p {
     display: block;
+    animation: portfolio-hover-text;
+    animation-duration: 0.5s;
 }
 
 #contact {
